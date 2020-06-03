@@ -1,0 +1,80 @@
+<app-header [username]='username' [userStatus]="userStatus"></app-header>
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="../../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../../../../assets/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/custom.css">
+
+</head>
+
+<body>
+    <!-- Start Cart  -->
+    <div class="cart-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-main table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Images</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let product of products">
+                                <tr>
+                                    <td class="thumbnail-img">
+                                        <img class="" [src]="product.imgSrc" alt="" />
+                                    </td>
+                                    <td class="name-pr">
+                                        <a>{{product.product_name}}</a>
+                                    </td>
+                                    <td class="name-pr">
+                                        <a>{{product.price}}</a>
+                                    </td>
+                                    <td>
+                                        <p class="btn hvr-hover" (click)="handleAddItemToCart(product._id)">Add to cart</p>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-- End Cart -->
+</body>

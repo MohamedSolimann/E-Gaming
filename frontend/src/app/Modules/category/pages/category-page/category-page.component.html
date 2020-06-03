@@ -1,0 +1,80 @@
+<app-header [username]='username' [userStatus]="userStatus"></app-header>
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="../../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../../../../assets/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let category of categories" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" (click)="navigateTo('category/productpage/',category._id)" [src]='category.imgSrc' alt="" />
+                        <a class="btn hvr-hover" (click)="navigateTo('category/productpage/',category._id)">{{category.category_name}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="shop-cat-box">
+            <img class="img-fluid" (click)='navigateTo( "category/monitor")' src="../../../../assets/images/monitor.jpg" alt="" />
+            <a class="btn hvr-hover" (click)='navigateTo("category/monitor")'>Monitors</a>
+        </div>
+        <div class="shop-cat-box">
+            <img class="img-fluid" src="../../../../assets/images/mouse.jpg" (click)='navigateTo( "category/mouse")' alt="" />
+            <a class="btn hvr-hover" (click)='navigateTo( "category/mouse")'>Mice</a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="shop-cat-box">
+            <img class="img-fluid" src="../../../../assets/images/keyboard.jpg" (click)='navigateTo( "category/keyboard")' alt="" />
+            <a class="btn hvr-hover" (click)='navigateTo( "category/keyboard")'>Keyboards</a>
+        </div>
+        <div class="shop-cat-box">
+            <img class="img-fluid" (click)='navigateTo( "category/mic")' src="../../../../assets/images/mic.jpg" alt="" />
+            <a class="btn hvr-hover" (click)='navigateTo( "category/mic")'>Mics</a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="shop-cat-box">
+            <img class="img-fluid" (click)='navigateTo( "category/chair")' src="../../../../assets/images/chair.jpg" alt="" />
+            <a class="btn hvr-hover" (click)='navigateTo( "category/chair")'>Chairs</a>
+        </div>
+        <div class="shop-cat-box">
+            <img class="img-fluid" src="../../../../assets/images/pad.jpg" (click)='navigateTo( "category/mousepad")' alt="" />
+            <a class="btn hvr-hover" (click)='navigateTo( "category/pad")'>Pads</a>
+        </div>
+    </div> -->
+
+</body>

@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="login-page">
+    <div class="form">
+        <input type="text" required [(ngModel)]="username" name='username' placeholder="Username" #Username="ngModel" />
+        <p class="error" *ngIf="Username.invalid && Username.touched">Username is Required.</p>
+        <input type="text" required email [(ngModel)]="email" name="email" placeholder="Email" #Email="ngModel" />
+        <p class="error" *ngIf="Email.errors?.required && Email.touched">Email is Required.</p>
+        <p class="error" *ngIf=" Email.errors?.email && Email.touched"> Email Invalid</p>
+        <input type="password" [(ngModel)]="password" minlength=8 required placeholder="Password" name="password" #Password='ngModel' />
+        <p class="error" *ngIf="Password.invalid && Password.touched">Password is Required.</p>
+        <input type="text" [(ngModel)]="mobile" required placeholder="Mobile" name="mobile" #Mobile="ngModel" />
+        <p class="error" *ngIf="Mobile.invalid && Mobile.touched">Mobile is Required.</p>
+        <p class="error" *ngIf="show">{{responseMessage}}</p>
+        <button [disabled]="Email.errors ||Username.invalid||Password.invalid||Mobile.invalid" (click)='handleSignUp()'>Create</button>
+        <p class="message">Registered? <a (click)="navigateTo('user/signin')">SignIn</a></p>
+    </div>
+</div>
+<script>
+    $('.message a').click(function() {
+        $('form').animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, "slow");
+    });
+</script>

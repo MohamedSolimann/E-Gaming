@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<head>
+    <!-- <link rel="stylesheet" href="../../../../../assets/css/bootstrap.min.css"> -->
+
+</head>
+<div class="login-page">
+    <div class="form">
+        <input type="text" required email placeholder="Email" [(ngModel)]="email" #Email="ngModel" />
+        <p class="error" *ngIf=" Email.errors?.required && Email.touched"> Email Required</p>
+        <p class="error" *ngIf=" Email.errors?.email && Email.touched"> Email Invalid</p>
+        <input type="password" required [(ngModel)]="password" placeholder="Password" #Password="ngModel" />
+        <p class="error" *ngIf="Password.invalid && Password.touched"> Password Required</p>
+        <p class='error' *ngIf="show">{{responseMessage}}</p>
+        <button [disabled]="Password.invalid || Email.errors" (click)="handleSignin()">log in</button>
+        <p class="message">Not registered? <a class="" (click)='navigateTo("user/signup")'>Create an account</a></p>
+    </div>
+</div>
