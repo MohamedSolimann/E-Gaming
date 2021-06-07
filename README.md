@@ -1,15 +1,15 @@
 # E-Gaming
 
 This project is an MEAN stack practice
--Angular:
-  1-lazy loading
-  2-Routing
-  3-Data flow
-  4-HttpClient Module
-  5-Directives
-  6-Services
--NodeJs/Express:
-  1-User Resigration wiht JWT
+# Angular:
+  1lazy loading  
+  2-Routing  
+  3-Data flow  
+  4-HttpClient Module  
+  5-Directives  
+  6-Services  
+# NodeJs/Express:
+  1-User Resigration wiht JWT  
   2-CRUD Operations
 
 ## Development server
